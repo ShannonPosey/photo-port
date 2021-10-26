@@ -9,6 +9,8 @@ const categories = [
 
 const mockCurrentCategory = jest.fn();
 const mockSetCurrentCategory = jest.fn();
+const mockcontactSelected = jest.fn();
+const mocksetContactSelected = jest.fn();
 
 afterEach(cleanup);
 
@@ -17,7 +19,9 @@ describe("Nav component", () => {
     it("renders", () => {
         render(<Nav categories={categories}
     setCurrentCategory={mockSetCurrentCategory}
-    currentCategory={mockCurrentCategory}/>);
+    currentCategory={mockCurrentCategory}
+    contactSelected={mockcontactSelected}
+    setContactSelected={mocksetContactSelected}/>);
     });
 
     // snapshot test
